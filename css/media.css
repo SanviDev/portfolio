@@ -3,10 +3,12 @@
         display: none;
     }
 }
+
 @media (width < 1250px) {
     .image-profile .cover {
         display: none;
     }
+
     .information {
         display: flex;
         align-items: center;
@@ -14,55 +16,68 @@
         width: 60%
     }
 }
+
 @media (width < 1135px) {
     .image-profile {
         display: none;
     }
+
     .information {
         width: 100%;
     }
+
     .about-me {
         margin: 5rem auto;
         position: static;
     }
+
     #major {
         flex-direction: column;
     }
+
     #projects {
         width: 90%;
         margin: 0 auto;
     }
+
     .conteiner-about {
         width: 80%;
         margin: 0 auto;
         padding: 5rem 1rem 3rem 1rem;
         font-size: 1.3rem;
     }
+
     .project {
         flex-direction: column;
     }
+
     .cotainer-projects {
         border-radius: 20px;
         height: auto;
         padding-bottom: 0;
     }
+
     a .cotainer-projects {
         margin-bottom: 115rem;
     }
+
     .info-p {
         width: 100%;
     }
+
     .paragraph-p {
         font-size: 1.3rem;
         margin-top: 1rem;
         width: 100%;
     }
+
     .img-p {
         width: 100%;
         padding: 0;
         margin: 0;
         position: relative;
     }
+
     .img-p img {
         width: 100%;
         border-radius: 0 0px 15px 15px;
@@ -70,6 +85,7 @@
         height: 100%;
     }
 }
+
 @media (width < 470px) {
     .image-profile {
         position: absolute;
@@ -78,11 +94,13 @@
         width: 100%;
         display: block;
     }
+
     .image-profile img {
         width: 100%;
         right: 0;
         bottom: 0;
     }
+
     .image-profile .cover {
         left: 50%;
         top: -20%;
@@ -92,29 +110,35 @@
         height: 30%;
         display: block;
     }
+
     .image-profile .cover-two {
-        left: 50%;  
-        top:  -20%;
+        left: 50%;
+        top: -20%;
         transform: translateX(-50%) rotate(-10deg);
         background: #111;
         width: 155%;
         height: 30%;
         display: block;
     }
+
     .content h1 {
         font-size: 3rem;
     }
+
     .content h2 {
         font-size: 2rem;
     }
+
     .about-me {
         display: none;
     }
+
     #about {
         display: block;
         background-color: #111;
         padding-bottom: 3rem;
     }
+
     .contact-me {
         flex-direction: column;
         width: 90%;
