@@ -87,6 +87,13 @@
 }
 
 @media (width < 470px) {
+    .theme-selector {
+        top: 5px;
+        left: 10%;
+        min-width: 5rem;
+        background-color: transparent;
+        position: relative;
+    }
     .image-profile {
         position: absolute;
         height: min-content;
@@ -135,7 +142,6 @@
 
     #about {
         display: block;
-        background-color: #111;
         padding-bottom: 3rem;
     }
 

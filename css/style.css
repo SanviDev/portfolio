@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 :root {
-    --primary-color: #33ccff
+    --primary-color: #33ccff;
+    --primary-color-dk: #2187a9;
+    --secondary-color: #cab95e;
+    --bg-dark-color: #111;
+    --bg-light-color: #fafafa;
 }
 
 *,
@@ -10,6 +14,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: 200ms background-color;
 }
 
 html {
@@ -23,7 +28,59 @@ body {
     font-family: "PT Sans", sans-serif;
     scrollbar-color: #373737, #bbb;
 }
-
+body.light, body.light #about {
+    background-color: #f0f0fa;
+}
+body.light #major,  body.light .image-profile .cover, body.light .image-profile .cover-two, body.light footer{
+    background-color: var(--bg-light-color);
+}
+body.light .cotainer-projects {
+    background-color: #fff;
+}
+body.light main h3, body.light h2, body.light .featured, body.light .content h2, body.light p {
+    color: var(--bg-dark-color);
+}
+body.light .content h1{
+    color: var(--primary-color-dk);
+}
+body.light .whatsapp-content, body.light .instagram-content {
+    background-color: #e0e0e0;
+    border-color: #bababa;
+}
+body.light .whatsapp-content:hover {
+    background: #25d366;
+    color: var(--bg-dark-color);
+    fill: var(--bg-dark-color);
+}
+body.light .instagram-content:hover p{
+    color: #fff;
+}
+body.light .git-footer-button svg, body.light .github-button svg {
+    fill: #1a1a1a;
+    &:hover {
+        fill: var(--secondary-color);
+    }
+}
+.theme-selector {
+    background-color: #7b7e7b;
+    width: 5%;
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(500px);
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    z-index: 1;
+    color: var(--secondary-color);
+    cursor: pointer;
+    &:hover {
+        color: #ead663;
+    }
+    min-width: 3rem;
+}
 main {
 
     width: 100%;
@@ -32,9 +89,10 @@ main {
 
 #major {
     height: 100vh;
-    background-color: #111;
+    background-color: var(--bg-dark-color);
     display: flex;
     flex-direction: row-reverse;
+    overflow: hidden;
 }
 
 .image-profile,
@@ -54,18 +112,20 @@ main {
     left: -40%;
     top: 68%;
     transform: translateY(-50%) rotate(10deg);
-    background: #111;
+    background-color: var(--bg-dark-color);
     width: 55%;
     height: 170%;
 }
-
+#about {
+    background-color: #111;
+}
 .image-profile .cover-two {
     content: "";
     position: absolute;
     left: -40%;
     top: 68%;
     transform: translateY(-50%) rotate(10deg);
-    background: #111;
+    background-color: var(--bg-dark-color);
     width: 55%;
     height: 170%;
     display: none;
@@ -120,7 +180,7 @@ h3 {
 .content h2,
 h2 {
     color: #ffffff;
-    text-shadow: 0 0 3px #cfc;
+    text-shadow: 0 0 3px var(--secondary-color);
 }
 
 .contact-me {
@@ -145,8 +205,8 @@ h2 {
 
 .whatsapp-content:hover {
     background: #25d366;
-    color: #111;
-    fill: #111;
+    color: var(--bg-dark-color);
+    fill: var(--bg-dark-color);
 }
 
 .instagram-content:hover {
@@ -172,7 +232,7 @@ h2 {
 }
 
 a {
-    color: #111;
+    color: var(--bg-dark-color);
     text-decoration: none;
 }
 
@@ -245,7 +305,7 @@ a .paragraph-p {
 
 .js {
     background-color: #f4f966;
-    color: #111;
+    color: var(--bg-dark-color);
 }
 
 .astro {
@@ -259,8 +319,8 @@ a .paragraph-p {
     color: #fdfdfd;
     transition: all 250ms;
     &:hover {
-        fill: var(--primary-color);
-        transform: rotate(45deg);
+        fill: var(--secondary-color);
+        transform: rotate(15deg);
     }
 }
 
@@ -279,13 +339,13 @@ footer {
     justify-content: center;
     width: 100%;
     height: 7rem;
-    background-color: #111;
+    background-color: var(--bg-dark-color);
 
 }
 .git-footer-button svg {
     fill: #aaa;
     transition: 250ms;
     &:hover {
-        fill: #55d2fb;
+        fill: var(--secondary-color);
     }
 }
