@@ -3,14 +3,12 @@
 :root {
     --primary-color: #33ccff;
     --primary-color-dk: #2187a9;
-    --secondary-color: #cab95e;
+    --secondary-color: #fff;
     --bg-dark-color: #111;
     --bg-light-color: #fafafa;
+    --dk-txt-color: #f0f0f0;
 }
-
-*,
-::after,
-::before {
+*,::after,::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -18,143 +16,65 @@
 }
 
 html {
+    background: radial-gradient(circle at top, #262626, #151515, #111);
     scroll-behavior: smooth;
-    scrollbar-color: #373737, #bbb;
-    color: #f0f0f0;
-}
-
-body {
-    background-color: #1a1a1a;
+    color: var(--dk-txt-color);
     font-family: "PT Sans", sans-serif;
-    scrollbar-color: #373737, #bbb;
 }
-body.light, body.light #about {
-    background-color: #f0f0fa;
-}
-body.light #major,  body.light .image-profile .cover, body.light .image-profile .cover-two, body.light footer{
-    background-color: var(--bg-light-color);
-}
-body.light .cotainer-projects {
-    background-color: #fff;
-}
-body.light main h3, body.light h2, body.light .featured, body.light .content h2, body.light p {
-    color: var(--bg-dark-color);
-}
-body.light .content h1{
-    color: var(--primary-color-dk);
-}
-body.light .whatsapp-content, body.light .instagram-content {
-    background-color: #e0e0e0;
-    border-color: #bababa;
-}
-body.light .whatsapp-content:hover {
-    background: #25d366;
-    color: var(--bg-dark-color);
-    fill: var(--bg-dark-color);
-}
-body.light .instagram-content:hover p{
-    color: #fff;
-}
-body.light .git-footer-button svg, body.light .github-button svg {
-    fill: #1a1a1a;
-    &:hover {
-        fill: var(--secondary-color);
-    }
-}
-.theme-selector {
-    background-color: #7b7e7b;
-    width: 5%;
-    position: fixed;
-    top: 90%;
-    left: 95%;
-    transform: translateX(-50%);
-    backdrop-filter: blur(500px);
-    text-align: center;
-    padding: .5rem;
-    font-size: 1.5rem;
-    border-radius: 50px;
-    z-index: 1;
-    color: var(--secondary-color);
-    cursor: pointer;
-    &:hover {
-        color: #ead663;
-    }
-    min-width: 3rem;
-}
-main {
 
+header {
+    position: fixed;
     width: 100%;
-    scrollbar-color: #373737, #bbb;
+}
+nav {
+    display: flex;  
+    gap: 15px;
+    margin: 0 auto;
+    width: max-content;
+    padding: 1rem 2rem;
+    background-color: rgba(200, 200, 200, .9);
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+}
+nav a {
+    color: ;
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+main {
+    padding: 5rem;
 }
 
 #major {
     height: 100vh;
-    background-color: var(--bg-dark-color);
-    display: flex;
-    flex-direction: row-reverse;
-    overflow: hidden;
 }
 
-.image-profile,
-.image-profile img {
-    height: 100%;
+.image-profile {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
+    z-index: -1;
 }
-
 .image-profile img {
-    right: -8%;
-}
-
-.image-profile .cover {
-    content: "";
-    position: absolute;
-    left: -40%;
-    top: 68%;
-    transform: translateY(-50%) rotate(10deg);
-    background-color: var(--bg-dark-color);
-    width: 55%;
-    height: 170%;
-}
-#about {
-    background-color: #111;
-}
-.image-profile .cover-two {
-    content: "";
-    position: absolute;
-    left: -40%;
-    top: 68%;
-    transform: translateY(-50%) rotate(10deg);
-    background-color: var(--bg-dark-color);
-    width: 55%;
-    height: 170%;
-    display: none;
-}
-
-.information {
-    position: absolute;
-    left: 0;
-    padding: 30px;
-    color: #f0f0f0;
-    width: 65%;
-}
-
-.content {
     width: 100%;
+    object-fit:cover;
 }
-
-.content h1,
-.content h2 {
+.top h1 {
     color: var(--primary-color);
     text-align: center;
     text-shadow: 0 0 10px var(--primary-color);
-    font-size: 5rem;
+    font-size: 4.3rem;
 }
 
-.content h2 {
-    font-size: 3rem;
+.top h2 {
+    text-align: center;
+    font-size: 2.5rem;
     margin-top: .5rem;
-
 }
 
 h2 {
@@ -162,13 +82,25 @@ h2 {
     font-size: 2.50rem;
 }
 
+.information {
+    width: 100%;
+    margin: 0 auto;
+}
+.content {
+    margin: 0 auto;
+    width: 80%;
+}
 .about-me {
-    margin-top: 5rem;
-    margin-left: 5rem
+    margin: 3rem auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 
@@ -176,24 +108,31 @@ h3 {
     font-size: 1.3rem;
 }
 
-.featured,
-.content h2,
-h2 {
+h2, .featured {
     color: #ffffff;
     text-shadow: 0 0 3px var(--secondary-color);
 }
-
+.extra{
+    margin-top: 1rem;
+}
 .contact-me {
+    margin-top: .5rem;
     display: flex;
+    width: 30rem;
 }
 
-.whatsapp-content,
-.instagram-content {
+a {
+    color: var(--bg-dark-color);
+    text-decoration: none;
+}
+
+.target {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 15rem;
     gap: 5px;
-    margin: 1.3rem 1rem 0 0;
+    margin: .5rem 1rem 0 0;
     background: #373737;
     padding: .3rem .5rem;
     border-radius: 50px;
@@ -203,82 +142,37 @@ h2 {
     color: #fff;
 }
 
-.whatsapp-content:hover {
-    background: #25d366;
-    color: var(--bg-dark-color);
-    fill: var(--bg-dark-color);
+.github-svg {
+    fill: #111;
 }
+.github-content:hover {
+    background-color: #1a1a1a;
 
-.instagram-content:hover {
-    background: radial-gradient(circle at 0% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-}
-
-.see-more {
-    margin-top: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    height: 4rem;
-    background-color: var(--primary-color);
-    border-radius: 50px;
-    box-shadow: 0 0 5px var(--primary-color);
-    transition: 250ms;
-
-    &:hover {
-        background-color: #55d2fb;
-        box-shadow: 0 0 10px var(--primary-color);
+    & .github-svg {
+        fill: #333;
     }
 }
 
-a {
-    color: var(--bg-dark-color);
-    text-decoration: none;
-}
+.linkedin-content:hover {
+    background-color: #6ba3da;
 
-#about {
-    display: none;
-}
-
-#projects {
-    width: 100%;
-    padding: 3rem 0;
 }
 
 #projects h2 {
     text-align: center;
 }
 
-a .paragraph-p {
-    color: #fff
-}
-
-.cotainer-projects {
-    width: 65%;
-    margin: 5rem auto;
-    background-color: #222;
-    height: 16rem;
-    border-radius: 20px;
-    /* box-shadow: 5px 5px 5px var(--primary-color); */
-    transition: 250ms;
-
-    &:hover {
-        /* box-shadow: 0 0 15px var(--primary-color); */
-        background-color: #333;
-    }
-}
-
-.cotainer-projects:last-of-type {
-    margin-bottom: 3rem;
-}
-
-.cotainer-projects:first-of-type {
-    margin-top: 3rem;
-}
-
 .project {
-    height: 100%;
+    margin: 2rem auto;
+    color: #fdfdfd;
+    height: auto;
     display: flex;
+    width: 65%;
+    /* background-color: red; */
+}
+
+.project:hover img {
+    transform: scale(.9);
 }
 
 .info-p {
@@ -292,8 +186,9 @@ a .paragraph-p {
 }
 
 .paragraph-p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-right: 15px;
+    color: var(--dk-txt-color);
 }
 
 .lenguage {
@@ -312,40 +207,44 @@ a .paragraph-p {
     background-color: #ff5e01e9;
 }
 
-.github-button svg{
-    margin: 1rem;
+.github-button svg {
+    /* margin: 1rem; */
     fill: #fdfdfd;
     width: min-content;
     color: #fdfdfd;
     transition: all 250ms;
-    &:hover {
-        fill: var(--secondary-color);
-        transform: rotate(15deg);
-    }
 }
 
-.img-p img {
-    height: 100%;
-    border-radius: 0 20px 20px 0;
-}
-
-#projects .see-more {
-    margin: .1rem auto;
-    width: 15%;
-}
-footer {
+.github-button a {
+    color: #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 7rem;
-    background-color: var(--bg-dark-color);
-
-}
-.git-footer-button svg {
-    fill: #aaa;
-    transition: 250ms;
-    &:hover {
-        fill: var(--secondary-color);
+    width:100%;
+    margin: 0 auto;
+    &:hover svg {
+            fill: var(--secondary-color);
+            transform: rotate(15deg);
     }
+}
+.github-button {
+    background-color: #262626;
+    width: 10rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    padding: .5rem;
+    border: .03rem solid #fff;
+}
+
+.img-p img {
+    width: 100%;
+    object-fit: fill;
+    transition: 250ms;
+    border: 1px solid #fafafa;
+    border-radius: 20px;
+}
+.img-p {
+    height:  100%;
+    overflow: hidden;
+    width: 32rem;
 }
