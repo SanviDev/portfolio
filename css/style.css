@@ -8,7 +8,10 @@
     --bg-light-color: #fafafa;
     --dk-txt-color: #f0f0f0;
 }
-*,::after,::before {
+
+*,
+::after,
+::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -22,33 +25,17 @@ html {
     font-family: "PT Sans", sans-serif;
 }
 
-header {
-    position: fixed;
-    width: 100%;
+body {
+    overflow-x: hidden;
 }
-nav {
-    display: flex;  
-    gap: 15px;
-    margin: 0 auto;
-    width: max-content;
-    padding: 1rem 2rem;
-    background-color: rgba(200, 200, 200, .9);
-    border-radius: 0 0 20px 20px;
-    z-index: 1;
-}
-nav a {
-    color: ;
-    &:hover {
-        color: var(--primary-color);
-    }
-}
+
 
 main {
     padding: 5rem;
 }
 
 #major {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .image-profile {
@@ -60,10 +47,12 @@ main {
     margin: 0 auto;
     z-index: -1;
 }
+
 .image-profile img {
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
+
 .top h1 {
     color: var(--primary-color);
     text-align: center;
@@ -86,10 +75,12 @@ h2 {
     width: 100%;
     margin: 0 auto;
 }
+
 .content {
     margin: 0 auto;
     width: 80%;
 }
+
 .about-me {
     margin: 3rem auto;
     width: 75%;
@@ -106,15 +97,19 @@ h3 {
 
 .about-me p {
     font-size: 1.3rem;
+    color: #ccc;
 }
 
-h2, .featured {
+h2,
+.featured {
     color: #ffffff;
     text-shadow: 0 0 3px var(--secondary-color);
 }
-.extra{
+
+.extra {
     margin-top: 1rem;
 }
+
 .contact-me {
     margin-top: .5rem;
     display: flex;
@@ -145,12 +140,17 @@ a {
 .github-svg {
     fill: #111;
 }
+
 .github-content:hover {
     background-color: #1a1a1a;
 
     & .github-svg {
         fill: #333;
     }
+}
+
+.target p {
+    color: #fff;
 }
 
 .linkedin-content:hover {
@@ -160,35 +160,7 @@ a {
 
 #projects h2 {
     text-align: center;
-}
-
-.project {
-    margin: 2rem auto;
-    color: #fdfdfd;
-    height: auto;
-    display: flex;
-    width: 65%;
-    /* background-color: red; */
-}
-
-.project:hover img {
-    transform: scale(.9);
-}
-
-.info-p {
-    height: 100%;
-    width: 70%;
-    padding: 1.5rem;
-}
-
-.info-p h3 {
-    font-family: 'Fira Code', monospace;
-}
-
-.paragraph-p {
-    font-size: 1.3rem;
-    margin-right: 15px;
-    color: var(--dk-txt-color);
+    margin-bottom: 6rem;
 }
 
 .lenguage {
@@ -196,6 +168,7 @@ a {
     padding: 0 1rem;
     border-radius: 50px;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .js {
@@ -207,44 +180,96 @@ a {
     background-color: #ff5e01e9;
 }
 
-.github-button svg {
-    /* margin: 1rem; */
-    fill: #fdfdfd;
-    width: min-content;
-    color: #fdfdfd;
-    transition: all 250ms;
-}
+.project {
+    display: grid;
+    max-width: 75%;
+    margin: 5rem auto;
+    height: 15rem;
+    /* background-color: red; */
+    grid-template-columns: repeat(2, 1fr);
 
-.github-button a {
-    color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:100%;
-    margin: 0 auto;
-    &:hover svg {
-            fill: var(--secondary-color);
-            transform: rotate(15deg);
+    &:hover img {
+        transform: scale(.95);
     }
 }
-.github-button {
-    background-color: #262626;
-    width: 10rem;
-    border-radius: 20px;
-    margin-top: 1rem;
-    padding: .5rem;
-    border: .03rem solid #fff;
+
+.project .info-project {
+    font-size: 1.3rem;
+    color: #ccc;
 }
 
-.img-p img {
-    width: 100%;
-    object-fit: fill;
-    transition: 250ms;
-    border: 1px solid #fafafa;
-    border-radius: 20px;
+.project h3 {
+    font-family: 'Fira Code', monospace;
 }
-.img-p {
-    height:  100%;
-    overflow: hidden;
-    width: 32rem;
+
+.image-project {
+    /* width: ; */
+    height: 100%;
+    /* scale: .7; */
+    margin-left: 3rem;
+
+    /* background-color: blue; */
+    & img {
+        width: 100%;
+        border-radius: 30px;
+        border: 1px solid #ddd;
+        transition: 250ms;
+        transition-delay: 100ms;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 40px;
+    margin: 2rem 1rem;
+}
+
+.action-button {
+    min-width: 8rem;
+    width: 11rem;
+    height: 3rem;
+    background-color: rgb(50, 50, 50, .5);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 10px;
+
+    & a {
+        fill: #fff;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover a {
+        color: #111;
+        fill: #222;
+    }
+
+    &:hover {
+        background-color: var(--primary-color);
+        color: #111;
+        fill: #222;
+    }
+
+    &:hover .path-one-export {
+        stroke: #111;
+    }
+
+    &:hover .path-two-export {
+        stroke: #222;
+    }
+}
+
+.path-one-export {
+    stroke: #ffffff
+}
+
+.path-two-export {
+    stroke: #dddd
 }
