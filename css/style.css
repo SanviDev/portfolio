@@ -118,8 +118,17 @@ h2,
 }
 
 a {
-    color: var(--bg-dark-color);
-    text-decoration: none;
+    text-decoration: none   ;
+    color: #fff;
+    font-weight: 500;
+    transition: 100ms;
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.a-text {
+    text-decoration: underline;
 }
 
 .target {
@@ -180,43 +189,73 @@ a {
 .astro {
     background-color: #ff5e01e9;
 }
+.container-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
 
 .project {
-    display: grid;
-    max-width: 75%;
-    margin: 5rem auto;
-    height: 15rem;
-    /* background-color: red; */
-    grid-template-columns: repeat(2, 1fr);
-
-    &:hover img {
-        transform: scale(.95);
+    width: 35%;
+    display: flex;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    &a{
+        z-index: 3;
     }
 }
 
-.project .info-project {
-    font-size: 1.3rem;
-    color: #ccc;
-}
-
-.project h3 {
-    font-family: 'Fira Code', monospace;
-}
-
-.image-project {
-    /* width: ; */
-    height: 100%;
-    /* scale: .7; */
-    margin-left: 3rem;
-
-    /* background-color: blue; */
-    & img {
+    .project .info {
+        z-index: 2;
+        opacity: 0;
+        background-color: #111;
+        position: absolute;
+        height: 100%;
         width: 100%;
-        border-radius: 30px;
-        border: 1px solid #ddd;
         transition: 250ms;
-        transition-delay: 100ms;
+        text-align: center;
+        padding: 25px;
     }
+
+    .project:hover > .info {
+        opacity: .9 !important;
+    }
+    .project:hover > img {
+        filter: brightness(.6);
+    }
+
+.project img {
+    z-index: 1;
+    width: 100%;
+}
+
+.go-project {
+    background-color: var(--primary-color-dk);
+    width: 10rem;
+    height: 2rem;
+    opacity: 1;
+    transition: 100ms;
+    border-radius: 5px;
+    border: none;
+    margin: 1rem;
+    &:hover {
+        background-color: var(--primary-color);
+    }
+}
+.go-project a {
+    color: var(--bg-dark-color);
+    width: 100%;
+    height: 100%;
+}
+
+.go-project a:hover {
+    color: var(--bg-dark-color);
+     width: 100%;
+    height: 100%;
+    
 }
 
 .actions {
@@ -273,4 +312,13 @@ a {
 
 .path-two-export {
     stroke: #dddd
+}
+
+#viewCert {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem;
 }
