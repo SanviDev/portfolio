@@ -26,7 +26,15 @@
 }
 
 @media (width <706px) {
+    .content {
+        width: 100%;
+    }
+    .about-me {
+        padding: 0;
+        width: 100%;
+    }
     .about-me-title {
+        width: 100%;
         margin-bottom: 1rem;
         margin-top: 1.2rem;
     }
@@ -38,6 +46,7 @@
     #major {
         /* padding: 4rem; */
         min-width: 100%;
+        width: 100%;
         text-align: center;
 
         & h1 {
@@ -45,7 +54,7 @@
         }
 
         & .contact-me {
-            flex-direction: column;
+            /* flex-direction: column; */
             justify-content: center;
             width: 100%;
         }
