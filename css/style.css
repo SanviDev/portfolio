@@ -91,6 +91,12 @@ h2 {
     align-items: center;
 }
 
+.more-info{
+    margin-top: 2rem;
+    text-align: center;
+
+}
+
 h3 {
     font-size: 1.5rem;
     color: #fff;
@@ -109,9 +115,14 @@ h2,
 
 .extra {
     margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-me {
+    margin: 2rem auto;
+    align-items: center;
+    justify-content: center;
     margin-top: .5rem;
     display: flex;
     width: 30rem;
@@ -135,28 +146,23 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 15rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
     gap: 5px;
     margin: .5rem 1rem 0 0;
     background: #373737;
     padding: .3rem .5rem;
-    border-radius: 50px;
+    border-radius: 50%;
     border: .3px solid #fff;
     transition: 100ms;
-    fill: #fff;
     color: #fff;
 }
 
-.github-svg {
-    fill: #111;
-}
 
 .github-content:hover {
     background-color: #1a1a1a;
-
-    & .github-svg {
-        fill: #333;
-    }
+    color: #fff;
 }
 
 .target p {
@@ -165,7 +171,23 @@ a {
 
 .linkedin-content:hover {
     background-color: #6ba3da;
+    color: #fff;
 
+}
+
+.whatsapp-content:hover {
+    background-color: #25D366;
+    color: #fff;
+}
+
+.instagram-content:hover {
+    background: radial-gradient(circle at 30% 107%, 
+  #fdf497 0%, 
+  #fdf497 5%, 
+  #fd5949 45%, 
+  #d6249f 60%, 
+  #285AEB 90%);
+  color: #fff;
 }
 
 #projects h2 {
@@ -321,4 +343,8 @@ a {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 3rem;
+}
+
+#ContactMe {
+  text-align: center;  
 }
