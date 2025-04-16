@@ -26,6 +26,9 @@
 }
 
 @media (width <706px) {
+    main {
+        padding: 0;
+    }
     .content {
         width: 100%;
     }
@@ -33,14 +36,20 @@
         padding: 0;
         width: 100%;
     }
+    .information {
+        padding : 4rem
+    }
     .about-me-title {
         width: 100%;
         margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 1.2rem;
     }
-    .ptr {
+    .top {
+        padding: 2rem 2rem 0 2rem ;
         width: 100%;
-        /* text-align: center; */
+        text-align: center;
     }
 
     #major {
@@ -60,7 +69,7 @@
         }
     }
     #projects {
-        padding-top: 5rem;
+        padding: 3rem 4rem 0 4rem;
         &h2 {
             margin: 0 !important;;
         }
